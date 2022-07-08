@@ -8,11 +8,17 @@ window.onload=function () {
 }
 
 function setGame(){
+    // board = [
+    //     [0,0,0,0],
+    //     [0,0,0,0],
+    //     [0,0,0,0],
+    //     [0,0,0,0]
+    // ]
     board = [
-        [0,0,0,0],
-        [0,0,0,0],
-        [0,0,0,0],
-        [0,0,0,0]
+        [2,2,2,2],
+        [2,2,4,4],
+        [8,8,16,16],
+        [64,64,128,128]
     ]
 
     for (let r=0; r<rows; r++) {
@@ -39,6 +45,11 @@ function updateTile(tile,num){
             tile.classList.add("x8192");
         }
     }
-
-
 }
+
+
+document.addEventListener("keyup", (e)=>{ // keyup e quando terminamos de apertar um botao ele toma uma ação 
+    if(e.code == "ArrowLeft"){
+        slideLeft();
+    }
+})
