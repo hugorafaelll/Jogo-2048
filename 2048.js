@@ -59,6 +59,7 @@ document.addEventListener("keyup", (e)=>{ // keyup e quando terminamos de aperta
         slideDown();
         setTwo();
     }
+    document.getElementById("score").innerText = score;
 })
 
 function filterZero(row){
